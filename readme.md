@@ -111,9 +111,9 @@ erDiagram
 | **Tujuan**              | Memudahkan admin dalam mengelola data produk yang tersedia di sistem, sehingga data selalu up-to-date dan akurat.                                       |
 | **Kriteria Penerimaan** | - Admin dapat melihat seluruh daftar produk lengkap dengan kategori.                                                                                    |
 
-|                         | Isi                                                                                                          |
+| ID                      | UR-02                                                                                                        |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **ID**                  | UR-02                                                                                                        |
+|                         |                                                                                                              |
 | **Judul**               | Admin Melakukan Transaksi dan Melihat Riwayat Transaksi                                                      |
 | **Aktor**               | Admin                                                                                                        |
 | **Deskripsi**           | Admin dapat membuat transaksi pembelian produk dan melihat daftar riwayat transaksi.                         |
