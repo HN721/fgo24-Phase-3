@@ -14,10 +14,10 @@ func SeedProducts_Category(conn *pgxpool.Conn) {
 		ProductID  int
 		CategoryID int
 	}{
-		{1, 1},
-		{2, 2},
-		{3, 3},
-		{4, 4},
+		{5, 1},
+		{6, 2},
+		{7, 3},
+		{8, 4},
 	}
 
 	for _, m := range mappings {

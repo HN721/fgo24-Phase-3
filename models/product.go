@@ -78,3 +78,34 @@ func GetAllProducts() ([]Products, error) {
 
 	return data, nil
 }
+func GetProductByID(id int) (Products, error) {
+	conn, err := utils.DBConnect()
+	if err != nil {
+		return Products{}, err
+	}
+	defer conn.Close()
+
+	query := `
+	SELECT 
+		p.name,
+		c.name AS category,
+		p.image_url AS image,
+		p.purchase_price,
+		p.selling_price,
+		p.stock
+	FROM products p
+	JOIN products_category pc ON p.id = pc.product_id
+	JOIN category c ON c.id = pc.category_id
+	WHERE p.id = $1
+	LIMIT 1
+	`
+
+	row, err := conn.Query(context.Background(), query, id)
+
+	data, err := pgx.CollectOneRow(row, pgx.RowToStructByName[Products])
+	if err != nil {
+		return Products{}, err
+	}
+
+	return data, nil
+}

@@ -15,7 +15,8 @@ func RunSeed(pool *pgxpool.Pool) {
 	}
 	defer conn.Release()
 
-	SeedCategory(conn)
-	SeedProduct(conn)
-	SeedProducts_Category(conn)
+	// SeedCategory(conn)
+	// SeedProduct(conn)
+	// SeedProducts_Category(conn)
+	SeedUsers(conn)
 }
