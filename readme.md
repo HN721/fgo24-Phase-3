@@ -6,16 +6,8 @@ flowchart TD
     C -->|Admin/Pengguna| E[Lihat Produk]
     C -->|Admin| F[Kelola Transaksi]
 
-    D --> D1[Buat Kategori]
-    D --> D2[Perbarui Kategori]
-    D --> D3[Hapus Kategori]
-    D --> D4[Daftar Kategori]
-    D1 --> G[(Database: Kategori)]
-    D2 --> G
-    D3 --> G
-    D4 --> G
 
-    E --> E1[Daftar Produk]
+    E --> E1[Kelola Produk]
     E1 --> H[(Database: Produk)]
     H -->|Termasuk Link Gambar| E1
 
@@ -35,10 +27,6 @@ flowchart TD
     D:::process
     E:::process
     F:::process
-    D1:::process
-    D2:::process
-    D3:::process
-    D4:::process
     E1:::process
     F1:::process
     F2:::process
@@ -47,7 +35,6 @@ flowchart TD
     K:::error
     M:::error
     N:::process
-    G:::data
     H:::data
     L:::data
 

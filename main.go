@@ -16,6 +16,7 @@ func main() {
 
 	// services.RunSeed(pool)
 	router.CombineRouter(r)
+	r.Static("/uploads", "./uploads")
 
 	r.Run(":8080")
 
