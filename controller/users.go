@@ -55,7 +55,7 @@ func LoginUser(ctx *gin.Context) {
 		})
 		return
 	}
-	token, err := utils.GenerateToken(user.ID, user.Email)
+	token, err := utils.GenerateToken(user.ID, user.Email, user.Role)
 	if err != nil {
 		ctx.JSON(http.StatusUnauthorized, gin.H{
 			"success": false,
