@@ -56,7 +56,6 @@ flowchart TD
 ```mermaid
 erDiagram
     User ||--o{ Transactions : makes
-    Categories ||--o{ Products : contains
     Products ||--o{ Transactions : involved_in
     Categories ||--o{ Products_Category : categorized_by
     Products ||--o{ Products_Category : has
